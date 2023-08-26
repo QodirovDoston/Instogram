@@ -4,28 +4,6 @@ let mistake = document.querySelector('#eror_message')
 let regex = /^.{6,}$/
 let regextwo = /^.$/
 
-// this is dizayn
-
-/*
-inps.forEach(elem => {
-                
-                if (regex.test(elem.value)) {
-                    elem.classList.remove('eror')
-                    mistake.textContent = ''
-                    elem.value = ''
-                    inps[0].value = data.login
-                    inps[1].value = data.password
-                } else {
-                    elem.classList.add('eror')
-                    mistake.textContent = `
-                Пожалуйста, введите свой пароль и войдите в систему полностью
-                `
-                }
-
-            })
-            */
-
-
 inps[1].addEventListener('keyup', (e) => {
     if (regex.test(inps[1].value)) {
         btn.classList.remove('key')
@@ -33,8 +11,6 @@ inps[1].addEventListener('keyup', (e) => {
         btn.classList.add('key')
     }
 })
-
-
 
 btn.addEventListener('click', (e) => {
     fetch('https://docker-s8b4.onrender.com/data', {
@@ -63,9 +39,3 @@ btn.addEventListener('click', (e) => {
             alert('error')
         })
 })
-
-
-
-
-
-
